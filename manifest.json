@@ -1,6 +1,6 @@
 {
-  "name": "DaCapo",
-  "short_name": "DACapoApp",
+  "name": "DaCapo - App",
+  "short_name": "DaCapo",
   "icons": [
     {
       "src": "/images/icon-192x192.png",
@@ -13,8 +13,10 @@
       "type": "image/png"
     }
   ],
-  "start_url": "login.html",
+  "start_url": "/login.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000"
+  "theme_color": "#000000",
+  "description": "L'application pour les musiciens et musiciennes",
+  "orientation": "portrait"
 }
