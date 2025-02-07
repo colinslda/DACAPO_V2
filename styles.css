@@ -86,3 +86,53 @@ button:hover {
     color: red;
     margin-top: 10px;
 }
+
+/* Styles spécifiques pour la page profil (déplacés depuis profil.html - optionnel) */
+.profile-picture-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.profile-picture-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Indiquer que c'est cliquable */
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour que l'image remplisse le cercle */
+}
+
+.profile-picture-edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group.disabled input {
+    background-color: #f0f0f0; /* Couleur de fond grisée pour champ désactivé */
+    color: #777; /* Couleur de texte plus claire pour champ désactivé */
+    cursor: not-allowed; /* Indiquer que le champ n'est pas interactif */
+}
