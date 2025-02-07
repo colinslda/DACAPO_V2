@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <script type="module" src="auth.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,24 +30,12 @@
                 <label for="phone">Numéro de téléphone (optionnel)</label>
                 <input type="tel" id="phone" name="phone">
             </div>
+            <div class="error-message" id="signupError" style="display:none;"></div>
             <button type="submit">S'inscrire</button>
         </form>
         <div class="link-btn">
             <a href="login.html">Vous avez déjà un compte ? Se connecter</a>
         </div>
     </div>
-
-    <script>
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Ajoutez ici la logique d'inscription (ex: fetch API pour envoyer les données au serveur)
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const phone = document.getElementById('phone').value;
-            console.log('Nom:', name, 'Email:', email, 'Mot de passe:', password, 'Téléphone:', phone);
-            alert('Inscription soumise (voir console pour les données)'); // Ceci est un exemple, remplacez par votre logique.
-        });
-    </script>
 </body>
 </html>
