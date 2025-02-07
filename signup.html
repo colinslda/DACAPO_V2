@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Inscription</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de téléphone (optionnel)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <div class="link-btn">
+            <a href="login.html">Vous avez déjà un compte ? Se connecter</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Ajoutez ici la logique d'inscription (ex: fetch API pour envoyer les données au serveur)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const phone = document.getElementById('phone').value;
+            console.log('Nom:', name, 'Email:', email, 'Mot de passe:', password, 'Téléphone:', phone);
+            alert('Inscription soumise (voir console pour les données)'); // Ceci est un exemple, remplacez par votre logique.
+        });
+    </script>
+</body>
+</html>
