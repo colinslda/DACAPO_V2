@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <script type="module" src="auth.js"></script>
+    <style>
+        /* Styles spécifiques pour la page profil */
+        .profile-picture-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-picture-frame {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* Indiquer que c'est cliquable */
+        }
+
+        .profile-picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Pour que l'image remplisse le cercle */
+        }
+
+        .profile-picture-edit-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group.disabled input {
+            background-color: #f0f0f0; /* Couleur de fond grisée pour champ désactivé */
+            color: #777; /* Couleur de texte plus claire pour champ désactivé */
+            cursor: not-allowed; /* Indiquer que le champ n'est pas interactif */
+        }
+
+        #profilePictureUpload {
+            display: none; /* Cacher l'input de type fichier par défaut */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Profil</h2>
+        <div class="profile-picture-container">
+            <div class="profile-picture-frame" onclick="document.getElementById('profilePictureUpload').click();">
+                <img id="profileImageDisplay" src="images/default-profile.png" alt="Photo de profil" class="profile-picture">
+                <span class="profile-picture-edit-icon">+</span>
+            </div>
+            <input type="file" id="profilePictureUpload" accept="image/*">
+        </div>
+
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group disabled">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" disabled>
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de téléphone (optionnel)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="success-message" id="profileSuccess" style="display:none;"></div>
+            <div class="error-message" id="profileError" style="display:none;"></div>
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+    </div>
+
+    <script>
+        // Vous ajouterez le code JavaScript ici ou dans un fichier externe (profile.js)
+        // pour la gestion du profil, l'upload de l'image, et l'interaction avec Firebase.
+    </script>
+</body>
+</html>
+
