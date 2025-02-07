@@ -1,6 +1,6 @@
 {
-  "name": "DACAPO",
-  "short_name": "DACAPOApp",
+  "name": "DaCapo",
+  "short_name": "DACapoApp",
   "icons": [
     {
       "src": "/images/icon-192x192.png",
