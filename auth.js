@@ -33,9 +33,9 @@ async function signup(name, email, password, phone) {
         });
 
         console.log("Utilisateur inscrit:", user);
-        alert("Inscription réussie !"); // Vous pouvez rediriger l'utilisateur ici
-        // Rediriger l'utilisateur vers une page après inscription réussie (ex: page d'accueil)
-        // window.location.href = 'index.html';
+        // alert("Inscription réussie !"); // Suppression de l'alerte, redirection à la place
+        // Rediriger l'utilisateur vers main.html après inscription réussie
+        window.location.href = 'main.html';
 
     } catch (error) {
         console.error("Erreur lors de l'inscription:", error.code, error.message);
@@ -56,9 +56,9 @@ async function login(email, password) {
     try {
         await signInWithEmailAndPassword(auth, email, password);
         console.log("Utilisateur connecté avec succès!");
-        alert("Connexion réussie !"); // Vous pouvez rediriger l'utilisateur ici
-        // Rediriger l'utilisateur vers une page après connexion réussie (ex: page d'accueil)
-        // window.location.href = 'index.html';
+        // alert("Connexion réussie !"); // Suppression de l'alerte, redirection à la place
+        // Rediriger l'utilisateur vers main.html après connexion réussie
+        window.location.href = 'main.html';
 
     } catch (error) {
         console.error("Erreur lors de la connexion:", error.code, error.message);
